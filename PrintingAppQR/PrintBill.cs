@@ -32,6 +32,7 @@ namespace PrintingAppQR
         public class Table_Watcher
         {
 
+            ReceiptPrinter rp = new ReceiptPrinter();
             string sqlconn = ConfigurationManager.ConnectionStrings["Connection"].ToString();
             public string ConnectionString()
             {
@@ -69,9 +70,22 @@ namespace PrintingAppQR
                         rp.WriteLog("Connectivity Error occured: " + ex.InnerException.Message);
                     }
                     rp.WriteLog("Connectivity Error: " + ex.Message);
-
+                    RestartDependency();
                 }
 
+            }
+
+            private void RestartDependency()
+            {
+                rp.WriteLog("Printing App RestartDependency " + DateTime.Now);
+                if (_dependency != null)
+                {
+                    _dependency.OnChanged -= _dependency_OnChanged;
+                    _dependency.Dispose();
+                    _dependency = null;
+                }
+                WatchTable();
+                StartTableWatcher();
             }
             public void StartTableWatcher()
             {
@@ -80,10 +94,13 @@ namespace PrintingAppQR
             public void StopTableWatcher()
             {
                 //_dependency.Stop();
+                rp.WriteLog("StopTableWatcher");
+                RestartDependency();
             }
             void _dependency_OnError(object sender, ErrorEventArgs e)
             {
-
+                rp.WriteLog("_dependency_OnError " + e.Message);
+                RestartDependency();
             }
 
             void _dependency_OnChanged(object sender, RecordChangedEventArgs<FlightDetails> e)
@@ -162,6 +179,12 @@ namespace PrintingAppQR
                                             rptDoc.PrintOptions.ApplyPageMargins(objPageMargins);
                                             rptDoc.PrintOptions.PrinterName = PrinterName;
                                             rptDoc.PrintToPrinter(1, false, 0, 0);
+                                            rptDoc.Close();
+                                            rptDoc.Dispose();
+                                            rptDoc = null;
+                                            GC.Collect();
+
+                                            rp.WriteLog("Printed");
 
                                             //Process.Start("C:\\Users\\DELL\\Desktop\\PrintingAppKOT\\PrintingApp\\bin\\Release\\PrintingAppKOT.exe");
 
@@ -269,6 +292,12 @@ namespace PrintingAppQR
                                             rptDoc.PrintOptions.ApplyPageMargins(objPageMargins);
                                             rptDoc.PrintOptions.PrinterName = PrinterName;
                                             rptDoc.PrintToPrinter(1, false, 0, 0);
+                                            rptDoc.Close();
+                                            rptDoc.Dispose();
+                                            rptDoc = null;
+                                            GC.Collect();
+
+                                            rp.WriteLog("Printed");
 
                                             // Initialize the report viewer
                                             //ReportViewer reportViewer = new ReportViewer();
