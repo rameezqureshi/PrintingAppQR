@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Products" targetNamespace="http://tempuri.org/Products.xsd" xmlns:mstns="http://tempuri.org/Products.xsd" xmlns="http://tempuri.org/Products.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Products" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Products" msprop:Generator_UserDSName="Products">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtProduct" msprop:Generator_TableClassName="dtProductDataTable" msprop:Generator_TableVarName="tabledtProduct" msprop:Generator_RowChangedName="dtProductRowChanged" msprop:Generator_TablePropName="dtProduct" msprop:Generator_RowDeletingName="dtProductRowDeleting" msprop:Generator_RowChangingName="dtProductRowChanging" msprop:Generator_RowEvHandlerName="dtProductRowChangeEventHandler" msprop:Generator_RowDeletedName="dtProductRowDeleted" msprop:Generator_RowClassName="dtProductRow" msprop:Generator_UserTableName="dtProduct" msprop:Generator_RowEvArgName="dtProductRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:Caption="RestaurantName" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="FlightNo" msdata:Caption="RestaurantAddress1" msprop:Generator_ColumnVarNameInTable="columnFlightNo" msprop:Generator_ColumnPropNameInRow="FlightNo" msprop:Generator_ColumnPropNameInTable="FlightNoColumn" msprop:Generator_UserColumnName="FlightNo" type="xs:string" minOccurs="0" />
+              <xs:element name="SlipCode" msprop:Generator_ColumnVarNameInTable="columnSlipCode" msprop:Generator_ColumnPropNameInRow="SlipCode" msprop:Generator_ColumnPropNameInTable="SlipCodeColumn" msprop:Generator_UserColumnName="SlipCode" type="xs:string" minOccurs="0" />
+              <xs:element name="IsScan" msprop:Generator_ColumnVarNameInTable="columnIsScan" msprop:Generator_ColumnPropNameInRow="IsScan" msprop:Generator_ColumnPropNameInTable="IsScanColumn" msprop:Generator_UserColumnName="IsScan" type="xs:string" minOccurs="0" />
+              <xs:element name="IsChange" msprop:Generator_ColumnVarNameInTable="columnIsChange" msprop:Generator_ColumnPropNameInRow="IsChange" msprop:Generator_ColumnPropNameInTable="IsChangeColumn" msprop:Generator_UserColumnName="IsChange" type="xs:string" minOccurs="0" />
+              <xs:element name="RestaurantName" msprop:Generator_ColumnVarNameInTable="columnRestaurantName" msprop:Generator_ColumnPropNameInRow="RestaurantName" msprop:Generator_ColumnPropNameInTable="RestaurantNameColumn" msprop:Generator_UserColumnName="RestaurantName" type="xs:string" minOccurs="0" />
+              <xs:element name="SlipTime" msprop:Generator_ColumnVarNameInTable="columnSlipTime" msprop:Generator_ColumnPropNameInRow="SlipTime" msprop:Generator_ColumnPropNameInTable="SlipTimeColumn" msprop:Generator_UserColumnName="SlipTime" type="xs:string" minOccurs="0" />
+              <xs:element name="SlipDate" msprop:Generator_ColumnVarNameInTable="columnSlipDate" msprop:Generator_ColumnPropNameInRow="SlipDate" msprop:Generator_ColumnPropNameInTable="SlipDateColumn" msprop:Generator_UserColumnName="SlipDate" type="xs:string" minOccurs="0" />
+              <xs:element name="ReceiptType" msprop:Generator_ColumnVarNameInTable="columnReceiptType" msprop:Generator_ColumnPropNameInRow="ReceiptType" msprop:Generator_ColumnPropNameInTable="ReceiptTypeColumn" msprop:Generator_UserColumnName="ReceiptType" type="xs:string" minOccurs="0" />
+              <xs:element name="RestaurantAddress" msprop:Generator_ColumnVarNameInTable="columnRestaurantAddress" msprop:Generator_ColumnPropNameInRow="RestaurantAddress" msprop:Generator_ColumnPropNameInTable="RestaurantAddressColumn" msprop:Generator_UserColumnName="RestaurantAddress" type="xs:string" minOccurs="0" />
+              <xs:element name="RestaurantAddress1" msprop:Generator_ColumnVarNameInTable="columnRestaurantAddress1" msprop:Generator_ColumnPropNameInRow="RestaurantAddress1" msprop:Generator_ColumnPropNameInTable="RestaurantAddress1Column" msprop:Generator_UserColumnName="RestaurantAddress1" type="xs:string" minOccurs="0" />
+              <xs:element name="PhoneNo1" msprop:Generator_ColumnVarNameInTable="columnPhoneNo1" msprop:Generator_ColumnPropNameInRow="PhoneNo1" msprop:Generator_ColumnPropNameInTable="PhoneNo1Column" msprop:Generator_UserColumnName="PhoneNo1" type="xs:string" minOccurs="0" />
+              <xs:element name="ImageURL" msprop:Generator_ColumnVarNameInTable="columnImageURL" msprop:Generator_ColumnPropNameInRow="ImageURL" msprop:Generator_ColumnPropNameInTable="ImageURLColumn" msprop:Generator_UserColumnName="ImageURL" type="xs:string" minOccurs="0" />
+              <xs:element name="CustomerName" msprop:Generator_ColumnVarNameInTable="columnCustomerName" msprop:Generator_ColumnPropNameInRow="CustomerName" msprop:Generator_ColumnPropNameInTable="CustomerNameColumn" msprop:Generator_UserColumnName="CustomerName" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
